@@ -1,16 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography.X509Certificates;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.VisualBasic;
 
 namespace back.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [EnableCors("hola")]
     public class CalculosController : ControllerBase
     {
         ICalculosService calculosService;
