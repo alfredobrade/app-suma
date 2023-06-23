@@ -20,7 +20,7 @@ namespace back.Controllers
         public IActionResult Get()
         {
             
-            return Ok(calculos.Resultado);
+            return Ok("hola desde la app suma");
         }
 
         [HttpPost]
@@ -28,7 +28,7 @@ namespace back.Controllers
         {
 
             calculos.Resultado = calculosService.Sumar(calc.Np,calc.Ns);
-            return Ok(calculos);
+            return Ok(calculos.Resultado);
         }
 
 
